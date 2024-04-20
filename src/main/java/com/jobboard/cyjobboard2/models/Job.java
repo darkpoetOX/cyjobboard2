@@ -33,7 +33,7 @@ public class Job {
     private Employer employer;
 
     @ManyToMany(mappedBy = "appliedJobs", fetch = FetchType.EAGER)
-    private Set<Candidate> interestedCandidates  = new HashSet<>();
+    private Set<Candidate> candidates  = new HashSet<>();
 
 
     // Constructors, getters, and setters
@@ -104,29 +104,29 @@ public class Job {
     }
 
     public Set<Candidate> getCandidates() {
-        return interestedCandidates;
+        return candidates;
     }
 
     public void setCandidates(Set<Candidate> candidates) {
-        this.interestedCandidates = candidates;
+        this.candidates = candidates;
     }
 
     // Add a convenience method to add interested candidates
     // Add a convenience method to add interested candidates
-    public void addInterestedCandidate(Candidate candidate) {
-        interestedCandidates.add(candidate);
-        candidate.getAppliedJobs().add(this);
-    }
-
-    // Add a convenience method to remove interested candidates
-    public void removeInterestedCandidate(Candidate candidate) {
-        interestedCandidates.remove(candidate);
-        candidate.getAppliedJobs().remove(this);
-    }
+//    public void addInterestedCandidate(Candidate candidate) {
+//        candidates.add(candidate);
+//        candidate.getAppliedJobs().add(this);
+//    }
+//
+//    // Add a convenience method to remove interested candidates
+//    public void removeInterestedCandidate(Candidate candidate) {
+//        candidates.remove(candidate);
+//        candidate.getAppliedJobs().remove(this);
+//    }
 
     // Getter for interestedCandidates
     public Set<Candidate> getInterestedCandidates() {
-        return interestedCandidates;
+        return candidates;
 
     }
 
