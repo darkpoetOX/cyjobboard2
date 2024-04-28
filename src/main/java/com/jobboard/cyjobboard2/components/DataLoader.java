@@ -43,8 +43,8 @@ public class DataLoader implements ApplicationRunner {
         employerRepository.saveAll(List.of(employer1, employer2));
 
 
-        Job job1 = new Job("Software Developer", JobType.FULL_TIME, JobFormat.REMOTE, "Java Developer needed for client website development", employer1, JobSector.IT, City.NEW_YORK, Country.USA);
-        Job job2 = new Job("Biochem Scientist", JobType.PART_TIME, JobFormat.IN_PERSON, "Bio-scientist with background in DNA sequencing", employer2, JobSector.HEALTHCARE, City.TORONTO, Country.CANADA);
+        Job job1 = new Job("Software Developer", JobType.FULL_TIME, JobFormat.REMOTE, "Java Developer needed for client website development. Assessment: meet at the Farrindon building at 11:00 EST for registration, assessments starts at 11:30 EST.", employer1, JobSector.IT, City.NEW_YORK, Country.USA);
+        Job job2 = new Job("Biochem Scientist", JobType.PART_TIME, JobFormat.IN_PERSON, "Bio-scientist with background in DNA sequencing. Assessment: arrive at reception 15 mins before assessment, which will begin at 9:15 EDT.", employer2, JobSector.HEALTHCARE, City.TORONTO, Country.CANADA);
 
         jobRepository.saveAll(List.of(job1, job2));
 
